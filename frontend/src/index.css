@@ -1,0 +1,61 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes padding and border included in element width */
+}
+
+/* Set default font for entire application */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased; /* Makes text look smoother on Mac */
+  -moz-osx-font-smoothing: grayscale; /* Makes text look smoother on Mac */
+  background-color: #f5f5f5; /* Light gray background */
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Use parent's text color */
+}
+
+/* Make buttons look clickable */
+button {
+  cursor: pointer; /* Show hand cursor on hover */
+  border: none; /* Remove default border */
+  outline: none; /* Remove default outline */
+}
+
+/* Make buttons change color when hovering */
+button:hover {
+  opacity: 0.9; /* Slightly transparent on hover */
+}
+
+/* Simple banners for errors/success */
+.error-banner {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.success-banner {
+  background: #dcfce7;
+  color: #166534;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.loading {
+  padding: 12px;
+  color: #475569;
+}
+
+.empty {
+  padding: 12px;
+  color: #94a3b8;
+}

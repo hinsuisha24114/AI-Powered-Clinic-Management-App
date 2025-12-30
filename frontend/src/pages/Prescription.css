@@ -1,0 +1,153 @@
+/* Page */
+.eprescription-page {
+  margin-left: 250px;
+  padding: 16px 24px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Header */
+.eprescription-header {
+  margin-bottom: 14px;
+}
+
+.eprescription-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.eprescription-subtitle {
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Grid */
+.eprescription-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+}
+
+/* Card */
+.eprescription-card {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-top {
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Form */
+.prescription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.half {
+  width: 100%;
+}
+
+input,
+select,
+textarea {
+  padding: 9px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.primary-btn {
+  margin-top: 6px;
+  background: #2563eb;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Prescription List */
+.prescription-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prescription-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.patient-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.patient-notes {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.view-btn {
+  background: #e0e7ff;
+  color: #3730a3;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .eprescription-page {
+    margin-left: 0;
+  }
+
+  .eprescription-grid {
+    grid-template-columns: 1fr;
+  }
+}
