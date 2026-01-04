@@ -1,0 +1,388 @@
+/* Main dashboard container */
+.dashboard {
+  margin-left: 0; /* Layout already accounts for sidebar */
+  padding: 20px 30px; /* Space inside dashboard */
+  min-height: 100vh; /* Minimum full screen height */
+  background-color: #ffe4f0; /* Soft pink background similar to design */
+}
+
+/* ===== HERO SECTION (top white card) ===== */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hero-text {
+  color: #6b7280;
+  font-size: 14px;
+  max-width: 420px;
+}
+
+.hero-button {
+  margin-top: 8px;
+  background: #ec4899;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-doctor-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #fecaca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+}
+
+/* ===== DOCTOR LEAVE BAR AT TOP ===== */
+.leave-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e5f4ff; /* light blue background */
+  border-radius: 8px;
+  padding: 10px 14px;
+  border: 1px solid #bfdbfe;
+}
+
+.leave-label {
+  font-size: 14px;
+  color: #1f2937;
+  margin-right: 8px;
+}
+
+.leave-status {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.leave-on {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.leave-off {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.leave-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Grid layout for cards - 2 columns */
+.dashboard-grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  gap: 20px; /* Space between cards */
+  margin-top: 20px; /* Space from top (below leave bar) */
+}
+
+/* Each card container */
+.dashboard-card {
+  background-color: white; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Space inside card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow around card */
+}
+
+/* Card title */
+.card-title {
+  font-size: 18px; /* Text size */
+  font-weight: 600; /* Semi-bold */
+  color: #1f2937; /* Dark gray */
+  margin-bottom: 15px; /* Space below title */
+  padding-bottom: 10px; /* Space below title */
+  border-bottom: 1px solid #e5e7eb; /* Light gray line */
+}
+
+/* ===== APPOINTMENTS CARD STYLES ===== */
+
+/* Container for appointments list */
+.appointments-list {
+  display: flex; /* Stack items vertically */
+  flex-direction: column; /* Items in column */
+  gap: 15px; /* Space between items */
+}
+
+/* Each appointment item */
+.appointment-item {
+  display: flex; /* Items side by side */
+  justify-content: space-between; /* Space between left and right */
+  align-items: center; /* Vertically center */
+  padding: 12px; /* Space inside item */
+  background-color: #f9fafb; /* Very light gray background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Left side of appointment */
+.appointment-left {
+  display: flex; /* Items side by side */
+  align-items: center; /* Vertically center */
+  gap: 10px; /* Space between items */
+}
+
+/* Queue badge for current patient */
+.queue-badge {
+  background-color: #2563eb; /* Blue background */
+  color: white; /* White text */
+  padding: 4px 8px; /* Space inside badge */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 12px; /* Small text */
+  font-weight: 600; /* Bold */
+}
+
+/* Patient info container */
+.patient-info {
+  display: flex; /* Stack items vertically */
+  flex-direction: column; /* Items in column */
+  gap: 4px; /* Small space between items */
+}
+
+/* Patient name */
+.patient-name {
+  font-weight: 600; /* Bold */
+  color: #1f2937; /* Dark gray */
+  font-size: 14px; /* Text size */
+}
+
+/* Appointment reason */
+.appointment-reason {
+  color: #6b7280; /* Medium gray */
+  font-size: 12px; /* Small text */
+}
+
+/* Right side of appointment */
+.appointment-right {
+  display: flex; /* Items side by side */
+  align-items: center; /* Vertically center */
+  gap: 10px; /* Space between items */
+}
+
+/* Appointment time */
+.appointment-time {
+  color: #6b7280; /* Medium gray */
+  font-size: 12px; /* Small text */
+}
+
+/* Video call controls container */
+.call-controls {
+  display: flex; /* Buttons side by side */
+  gap: 5px; /* Small space between buttons */
+}
+
+/* Control button (play, mic, call) */
+.control-btn {
+  background-color: #2563eb; /* Blue background */
+  color: white; /* White text */
+  width: 32px; /* Button width */
+  height: 32px; /* Button height */
+  border-radius: 5px; /* Rounded corners */
+  display: flex; /* Center icon */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  font-size: 14px; /* Icon size */
+}
+
+/* Consultation button */
+.consult-btn {
+  background-color: #9ca3af; /* Gray background */
+  color: white; /* White text */
+  padding: 6px 12px; /* Space inside button */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 12px; /* Small text */
+}
+
+/* ===== QUEUE CARD STYLES ===== */
+
+/* Container for queue list */
+.queue-list {
+  display: flex; /* Stack items vertically */
+  flex-direction: column; /* Items in column */
+  gap: 12px; /* Space between items */
+}
+
+/* Each queue item */
+.queue-item {
+  display: flex; /* Items side by side */
+  align-items: center; /* Vertically center */
+  gap: 12px; /* Space between items */
+  padding: 10px; /* Space inside item */
+  background-color: #f9fafb; /* Very light gray background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Queue number (Q1, Q2, etc.) */
+.queue-number {
+  font-weight: 600; /* Bold */
+  color: #2563eb; /* Blue color */
+  font-size: 14px; /* Text size */
+  min-width: 30px; /* Minimum width */
+}
+
+/* Patient avatar circle */
+.queue-avatar {
+  width: 35px; /* Circle width */
+  height: 35px; /* Circle height */
+  border-radius: 50%; /* Makes it a perfect circle */
+  background-color: #e5e7eb; /* Light gray background */
+  display: flex; /* Center content */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  font-size: 18px; /* Emoji size */
+}
+
+/* Patient name in queue */
+.queue-name {
+  flex: 1; /* Takes remaining space */
+  font-weight: 500; /* Medium bold */
+  color: #1f2937; /* Dark gray */
+  font-size: 14px; /* Text size */
+}
+
+/* Estimated wait time */
+.wait-time {
+  color: #6b7280; /* Medium gray */
+  font-size: 12px; /* Small text */
+  font-weight: 500; /* Medium bold */
+}
+
+/* ===== NOTIFICATIONS CARD STYLES ===== */
+
+/* Container for notifications list */
+.notifications-list {
+  display: flex; /* Stack items vertically */
+  flex-direction: column; /* Items in column */
+  gap: 12px; /* Space between items */
+}
+
+/* Each notification item */
+.notification-item {
+  display: flex; /* Items side by side */
+  align-items: center; /* Vertically center */
+  gap: 12px; /* Space between items */
+  padding: 10px; /* Space inside item */
+  background-color: #f9fafb; /* Very light gray background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Notification icon */
+.notification-icon {
+  font-size: 20px; /* Icon size */
+}
+
+/* Notification content container */
+.notification-content {
+  display: flex; /* Stack items vertically */
+  flex-direction: column; /* Items in column */
+  gap: 4px; /* Small space between items */
+  flex: 1; /* Takes remaining space */
+}
+
+/* Notification message */
+.notification-message {
+  font-weight: 500; /* Medium bold */
+  color: #1f2937; /* Dark gray */
+  font-size: 14px; /* Text size */
+}
+
+/* Notification date */
+.notification-date {
+  color: #6b7280; /* Medium gray */
+  font-size: 12px; /* Small text */
+}
+
+/* ===== QUICK ACTIONS CARD STYLES ===== */
+
+/* Container for action buttons */
+.quick-actions {
+  display: flex; /* Stack items vertically */
+  flex-direction: column; /* Items in column */
+  gap: 12px; /* Space between buttons */
+}
+
+/* Each action button */
+.action-btn {
+  display: flex; /* Icon and text side by side */
+  align-items: center; /* Vertically center */
+  gap: 12px; /* Space between icon and text */
+  padding: 15px; /* Space inside button */
+  background-color: #2563eb; /* Blue background */
+  color: white; /* White text */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 14px; /* Text size */
+  font-weight: 500; /* Medium bold */
+  width: 100%; /* Full width */
+  transition: background-color 0.3s; /* Smooth color change */
+}
+
+/* When hovering over action button */
+.action-btn:hover {
+  background-color: #1d4ed8; /* Darker blue */
+}
+
+/* Icon inside action button */
+.action-icon {
+  font-size: 18px; /* Icon size */
+}
+
+/* ===== RESPONSIVE DESIGN - For smaller screens ===== */
+
+/* When screen is smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+  /* Change grid to single column */
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* Only 1 column */
+  }
+  
+  /* Adjust dashboard margin for smaller sidebar */
+  .dashboard {
+    margin-left: 0; /* No sidebar margin on mobile */
+    padding: 15px; /* Less padding */
+  }
+  
+  /* Adjust header margin */
+  .header {
+    margin-left: 0; /* No sidebar margin on mobile */
+  }
+}
+
+
